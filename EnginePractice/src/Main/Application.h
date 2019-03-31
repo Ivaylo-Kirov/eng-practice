@@ -1,6 +1,9 @@
 #pragma once
-
 #include "Core.h"
+#include "Events/Event.h"
+#include "Main/Events/ApplicationEvent.h"
+
+#include "Window.h"
 
 namespace EnginePractice {
 	class EP_API Application
@@ -11,9 +14,14 @@ namespace EnginePractice {
 
 		void Run();
 
+		void OnEvent(Event& e);
+	private:
+		bool OnWindowClose(WindowCloseEvent& e);
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
 	// to be defined in client
-	EnginePractice::Application * CreateApplication();
+	Application * CreateApplication();
 
 }

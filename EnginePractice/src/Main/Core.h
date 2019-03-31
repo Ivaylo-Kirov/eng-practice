@@ -9,3 +9,13 @@
 	#endif // EP_BUILD_DLL
 
 #endif // EP_PLATFORM_WINDOWS
+
+#ifdef EP_ENABLE_ASSERTS
+	#define EP_ASSERT(x, ...) { if(!(x)) { EP_ERROR(__VA_ARGS__); __debugbreak(); } }
+	#define EP_CORE_ASSERT(x, ...) { if(!(x)) { EP_CORE_ERROR(__VA_ARGS__); __debugbreak(); } }
+#else
+	#define EP_ASSERT(x, ...)
+	#define EP_CORE_ASSERT(x, ...)
+#endif
+
+#define BIT(x) (1 << x)
