@@ -7,12 +7,6 @@
     <Filter Include="Main\Events">
       <UniqueIdentifier>{EEC716A7-5A7D-8F9C-E371-89734F2686A0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Platform">
-      <UniqueIdentifier>{6367d562-ca3b-4f0c-9a33-e57aca577e9b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Platform\Windows">
-      <UniqueIdentifier>{ca110e50-24b5-4141-a00a-5e26ced0ed74}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\EP.h" />
@@ -37,25 +31,39 @@
     <ClInclude Include="src\Main\Events\MouseEvent.h">
       <Filter>Main\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Main\Layer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Main\LayerStack.h">
+      <Filter>Main</Filter>
+    </ClInclude>
     <ClInclude Include="src\Main\Log.h">
       <Filter>Main</Filter>
     </ClInclude>
-    <ClInclude Include="src\eppch.h" />
-    <ClInclude Include="src\Main\Window.h" />
-    <ClInclude Include="src\Main\WindowsWindow.h">
-      <Filter>Platform\Windows</Filter>
+    <ClInclude Include="src\Main\Window.h">
+      <Filter>Main</Filter>
     </ClInclude>
+    <ClInclude Include="src\Main\WindowsWindow.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="src\eppch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Main\Application.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="src\Main\Layer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Main\LayerStack.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
     <ClCompile Include="src\Main\Log.cpp">
       <Filter>Main</Filter>
     </ClCompile>
-    <ClCompile Include="src\eppch.cpp" />
     <ClCompile Include="src\Main\WindowsWindow.cpp">
-      <Filter>Platform\Windows</Filter>
+      <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="src\eppch.cpp" />
   </ItemGroup>
 </Project>
